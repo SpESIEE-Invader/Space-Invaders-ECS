@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D64CAEE7-4128-4D96-816C-0068C52973D1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpaceInvaders</RootNamespace>
+    <AssemblyName>SpaceInvaders</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\Components\BlockConstituentComponent.cs" />
+    <Compile Include="src\Components\CollidableComponent.cs" />
+    <Compile Include="src\Components\DeathSoundComponent.cs" />
+    <Compile Include="src\Components\DeathSpriteComponent.cs" />
+    <Compile Include="src\Components\DirectionComponent.cs" />
+    <Compile Include="src\Components\FacingComponent.cs" />
+    <Compile Include="src\Components\HitboxComponent.cs" />
+    <Compile Include="src\Components\InputComponent.cs" />
+    <Compile Include="src\Components\OwnerComponent.cs" />
+    <Compile Include="src\Components\PixelToSwitchComponent.cs" />
+    <Compile Include="src\Components\ShootComponent.cs" />
+    <Compile Include="src\Components\VelocityComponent.cs" />
+    <Compile Include="src\Config.cs" />
+    <Compile Include="src\Coordinator.cs" />
+    <Compile Include="src\Entity.cs" />
+    <Compile Include="src\EntityManager.cs" />
+    <Compile Include="src\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Game.cs" />
+    <Compile Include="src\Components\HealthComponent.cs" />
+    <Compile Include="src\Components\PositionComponent.cs" />
+    <Compile Include="src\GameState.cs" />
+    <Compile Include="src\Leaderboard.cs" />
+    <Compile Include="src\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\Components\SpriteComponent.cs" />
+    <Compile Include="src\Systems\AiSystem.cs" />
+    <Compile Include="src\Systems\BlockSystem.cs" />
+    <Compile Include="src\Systems\ChangeColorPixelSystem.cs" />
+    <Compile Include="src\Systems\CollidableSystem.cs" />
+    <Compile Include="src\Systems\DeathSystem.cs" />
+    <Compile Include="src\Systems\HitboxSyncSystem.cs" />
+    <Compile Include="src\Systems\HitSystem.cs" />
+    <Compile Include="src\Systems\InputSystem.cs" />
+    <Compile Include="src\Systems\ShootSystem.cs" />
+    <Compile Include="src\Systems\SuperSystem.cs" />
+    <Compile Include="src\SystemManager.cs" />
+    <Compile Include="src\Systems\TransformSystem.cs" />
+    <Compile Include="src\Vec2.cs" />
+    <EmbeddedResource Include="src\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Resources\space_invaders.ttf" />
+    <None Include="src\ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoot2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoot3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoot4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bonus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bonus2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bunker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ship1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ship2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ship3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ship4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ship5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ship6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ship7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ship8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ship9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoot1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\player1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\explosion.wav" />
+    <Content Include="Resources\explosion1.png" />
+    <Content Include="Resources\invaderkilled.wav" />
+    <Content Include="Resources\shoot.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
